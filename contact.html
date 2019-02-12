@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- fade in JS -->
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRajdhani" rel="stylesheet">
+
+  <title>SeaSome - Contact</title>
+
+</head>
+
+<body>
+
+  <div id="mast" class="contact-page">
+    <header id="main-header">
+      <div class="container">
+        <!-- Nav Bar -->
+        <nav class="navbar">
+
+          <span class="navbar-toggle" id="js-navbar-toggle">
+              <i class="fas fa-bars"></i>
+          </span>
+
+            <a href="index.html" class="logo">SeaSome</a>
+            <ul class="main-nav" id="js-menu">
+                <li><a href="mission.html" class="nav-links">Our Mission</a></li>
+                <li><a href="excur.html" class="nav-links">Excursions</a></li>
+                <li><a href="contact.html" class="nav-links">Chat With Us</a></li>
+                <li><a href="donate.html" class="nav-links boxed">Donate</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="head container">
+      <div class="container" id="contact-form">
+        <br><br>
+        <form id="contact" action="contact_success.html">
+          <div class="head">
+            <h2 data-aos="fade-down" data-aos-delay="150">Questions, Comments, Concerns, Funny jokes?</h2><br>
+            <p data-aos="fade-down" data-aos-delay="150">We want to hear it! And don't forget to check out the FAQ's below!</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="150">
+            <input type="text" name="name" placeholder="Name" /><br />
+            <input  type="email" name="email" placeholder="Email" /><br />
+            <textarea name="message" placeholder="Message"></textarea><br />
+            <button class="contact-btn" id="submit" type="submit">
+              SEND
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <section>
+      <div data-aos="fade-in" data-aos-delay="150" class="container" id="about">
+        <h1>FAQ's</h1>
+        <article>
+          <h3>Who can join?</h3>
+          <p>SeaSome excursions are not only open to anyone with a passion for photography but also a general passion
+          for the outdoors! This typically includes photographers and their family and/or friends. We as that anyone under 12 years stay
+          at home for the saftey of themselves and the experience of other excursion mates.</p>
+
+          <h3>How do I join an excursion?</h3>
+          <p>You can join by going to that excursions page! Just select either the "join" or "sign up" buttons on that page and fill
+          out the following forms. You're all set after that and we will keep you updated up until the trip date!</p>
+
+          <h3>When are new excursions added?</h3>
+          <p>The excursion locations shown have trips within the next year. They are updated accordingly!</p>
+
+          <h3>How physically challenging are these excursions?</h3>
+          <p>Depends on the location. However, our trip leaders are there to help, support and encourage the group to keep on truckin'! If
+          you have worries about an excursion's strenuousness, send an ask on that excursion's page!</p>
+
+          <h3>How can I cancel an excurion?</h3>
+          <p>You can cancel up until 7 days before the excursion's date. In your emails, there will be options to cancel. If you
+          have further troubles, please do no hesitate to contact us!</p>
+
+          <h3>Can I purchase a spot in an excursion the week of?</h3>
+          <p>Well, yes, but...there most likely will not be any spots left. They fill quickly especially as the trip nears. Keep an eye out
+          for how many spots are available on the excursion's page.</p>
+
+          <h3>What if the excursion I want is sold out?</h3>
+          <p>Keep checking back as some travelers may cancel and spots could re-open. Excursions in a locations occur multiple times a year, so look into the
+          date options and see what works best for you!</p>
+        </article>
+      </div>
+  </section>
+
+  </div>
+<br><br><br>
+  <section class="donate">
+    <h1>Donate</h1>
+      <div class="container" id="donate">
+
+        <article>
+            <h3>235</h3>
+            <p>
+              Successful Excursions
+            </p>
+        </article>
+
+        <article>
+            <h3>9,000</h3>
+            <p>
+              World-Changers
+            </p>
+        </article>
+
+        <article>
+            <h3>68</h3>
+            <p>
+              Magical Locations
+            </p>
+        </article>
+      </div>
+      <a href="donate.html">
+        <button class="donate-btn" type="submit">
+          DONATE
+        </button>
+      </a>
+  </section>
+
+  <div id='main-footer'>
+    <div class="container">
+      <p><a href="contact.html">FAQ's</a>     |     <a href="careers.html">Careers</a>     |     <a href="#">Terms</a></p>
+      <p>&copy; SeaSome 2019</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-quad',
+      duration: 600,
+    });
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+
+        mainNav.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>

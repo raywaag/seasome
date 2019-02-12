@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- fade in JS -->
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRajdhani" rel="stylesheet">
+
+  <title>SeaSome - Donate</title>
+
+</head>
+
+<body style="min-height: 20vh">
+
+  <div id="mast" class="donate-page">
+    <header id="main-header">
+      <div class="container">
+        <!-- Nav Bar -->
+        <nav class="navbar">
+
+          <span class="navbar-toggle" id="js-navbar-toggle">
+              <i class="fas fa-bars"></i>
+          </span>
+
+            <a href="index.html" class="logo">SeaSome</a>
+            <ul class="main-nav" id="js-menu">
+                <li><a href="#" class="nav-links">Our Mission</a></li>
+                <li><a href="excur.html" class="nav-links">Excursions</a></li>
+                <li><a href="contact.html" class="nav-links">Chat With Us</a></li>
+                <li><a href="donate.html" class="nav-links boxed">Donate</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div data-aos="fade-in" data-aos-delay="150" class="donation-container">
+      <div class="donation-box">
+        <div class="title">Donate knowing every cent goes towards oceanic conservation.</div>
+
+        <div class="fields">
+          <input type="text" id="firstName" placeholder="First Name"> </input>
+          <input type="text" id="lastName" placeholder="Last Name"> </input>
+          <input type="text" id="email" placeholder="Email"> </input>
+          <label for="custom">Custom amount:</label>
+          <input type="text" id="custom" placeholder="$ ----"> </input>
+        </div>
+
+        <div class="amount">
+          <div class="button">$30</div>
+          <div class="button">$50</div>
+          <div class="button">$100</div>
+        </div>
+
+        <div class="switch">
+        	<input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+        	<label for="one-time" class="switch-label switch-label-off">One-Time</label>
+        	<input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+        	<label for="monthly" class="switch-label switch-label-on">Monthly</label>
+        	<span class="switch-selection"></span>
+        </div>
+          <div class="anon-box">
+        		<input type="checkbox" id="anon" class="checkbox" />
+        		<label for="anon">Give Anonymously</label>
+          </div>
+        <div class="donate-button"><i class="fa fa-credit-card"></i> Donate Now</div>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-in" data-aos-delay="100" id="excur">
+    <ul>
+      <li>
+        <div>
+          <a href="#">
+            <h3>Great Stone Door</h3>
+            <h4>Tennessee</h4>
+          </a>
+        </div>
+        <img alt="Stonedoor, Tennessee" src="img/stonedoor.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Mount Everest</h3>
+            <h4>Nepal</h4>
+          </a>
+        </div>
+        <img alt="Mount Everest, Nepal" src="img/everest.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Redrock Falls</h3>
+            <h4>Many Glacier</h4>
+          </a>
+        </div>
+        <img alt="Redrock Falls, Many Glacier" src="img/red_rock.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Tour du Mont Blanc</h3>
+            <h4>France</h4>
+          </a>
+        </div>
+        <img alt="Tour du Mont Blanc, France" src="img/france.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="grinell_excur.html">
+            <h3>Grinnell Glacier</h3>
+            <h4>Montana</h4>
+          </a>
+        </div>
+        <img alt="Grinnell Glacier, Montana" src="img/grinnell.JPG">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Ófærufoss</h3>
+            <h4>Iceland</h4>
+          </a>
+        </div>
+        <img alt="Ófærufoss, Iceland" src="img/ofærufoss.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Capetown</h3>
+            <h4>Africa</h4>
+          </a>
+        </div>
+        <img alt="Capetown, Africa" src="img/capetown.jpg">
+      </li>
+
+      <li>
+        <div>
+          <a href="#">
+            <h3>Swiss National Park</h3>
+            <h4>Switzerland</h4>
+          </a>
+        </div>
+        <img alt="Swiss National Park, Switzerland" src="img/swiss.jpg">
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="main-footer">
+    <div class="container">
+      <p><a href="contact.html">FAQ's</a>     |     <a href="careers.html">Careers</a>     |     <a href="#">Terms</a></p>
+      <p>&copy; SeaSome 2019</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    easing: 'ease-in-quad',
+    duration: 600,
+  });
+
+  let mainNav = document.getElementById('js-menu');
+  let navBarToggle = document.getElementById('js-navbar-toggle');
+
+  navBarToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('active');
+  });
+
+    var firstName = "";
+		var lastName = "";
+		var email = "";
+		var dType = "";
+		var receipt = "";
+		var anon = "";
+		var list = "";
+		var amount = "";
+
+$(function() {
+		//Set & Highlight Donation Amount
+		$(".button").click(function(){
+			$(".button").removeClass("selected");
+			$(this).addClass("selected");
+			$(this).find("input").focus();
+		});
+  });
+  </script>
+</body>
+
+</html>

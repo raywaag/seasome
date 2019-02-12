@@ -1,0 +1,1032 @@
+@import "reset.css"
+
+// Variables
+$lightBlue: #c5e1ec
+$midBlue: #517fb5
+$darkBlue: #28415e
+$mainGray: #707070
+
+$fontFancy: 'Rajdhani', sans-serif
+$fontReg: 'Open Sans', sans-serif
+
+// Extended
+%mast-image {
+
+}
+
+
+// Flex Grid
+
+.flex-small, .flex-large
+  padding-left: 1rem
+  padding-right: 1rem
+
+.flex-row
+  margin-left: -1rem
+  margin-right: -1rem
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin-bottom: 2rem
+
+.flex-small, .flex-large
+  flex-basis: 100%
+  margin-bottom: 1rem
+
+//Small screen breakpoint
+@media (min-width: 600px)
+  .flex-small
+    flex: 1 1 0
+    margin-bottom: 0
+
+//Large screen breakpoint
+@media (min-width: 1000px)
+  .flex-large
+    flex: 1 1 0
+    margin-bottom: 0
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  font-family: $fontFancy
+  color: #3a3a3a
+
+section h1
+  margin-bottom: -2%
+
+img
+  max-width: 100%
+  height: auto
+  vertical-align: bottom
+
+a
+  text-decoration: none
+
+.container
+  margin: 0 auto
+  width: 90%
+  max-width: 1170px
+
+//---- Masthead ----
+#mast
+  background-image: url("../img/home-mast.jpg")
+  height: 100vh
+
+  //Grinnel Excursion Background
+  &.grinnel-excursion
+    background-image: url("../img/grinnell_excur.JPG")
+    background-repeat: no-repeat
+    background-size: contain
+    background-size: cover
+
+    //Excursion Page Background
+  &.excursion-page
+    background-image: url("../img/excur_head.jpg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-size: cover
+
+    //Contact Page Background
+  &.contact-page
+    background-image: url("../img/contact-head.jpg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-size: cover
+
+    //Donate Page Background
+  &.donate-page
+    background-image: url("../img/donate-head.jpg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-size: cover
+  .head
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    color: white
+    h1, p, .button
+      font-family: $fontReg
+      text-align: center
+    h1
+      line-height: 85px
+      margin: 10% 0 2% 0
+      font-size: 80px
+    p
+      margin-bottom: 1.5em
+    .button
+      display: flex
+      align-items: center
+      padding: 10px 30px
+      -webkit-transition: .7s
+      box-shadow: inset 0 0 0 2px $lightBlue
+      border-radius: 7px
+      color: white
+      &:hover, &:focus
+        background: $lightBlue
+        color: #fff
+
+
+
+
+
+
+
+
+
+@media (min-width: 500px)
+  #mast .head .splash
+    display: block
+    width: 300px
+
+@media (max-width: 700px)
+  #mast .head h1
+    margin: 0
+    margin: 20% 0 0 0
+    font-size: 50px
+
+//---- Itenirary ----
+
+#iten
+  display: flex
+  flex-direction: column
+  padding: 4em 0
+  justify-content: center
+  background: $lightBlue
+  margin-top: 5%
+  padding: 1em
+  border-radius: 7px
+  h1
+    display: inline-block
+  article
+    display: flex
+    flex-direction: column
+    margin: 0 0.85em 1em
+    padding: 1em
+    text-align: left
+    align-items: center
+    h3
+      text-align: left
+      font-size: 1.5em
+      font-weight: bold
+      margin-bottom: 0.5em
+      color: $darkBlue
+    p
+      font-size: 0.95em
+      line-height: 24px
+      font-weight: 400
+      margin-bottom: 1em
+    span
+      display: flex
+      align-items: center
+      margin-top: auto
+      font-size: 25px
+      padding: 10px 30px
+  span
+    i
+      width: 45px
+    a
+      color: #375a82
+
+@media (min-width: 1200px)
+  #iten
+    flex-direction: row
+    article
+      margin-bottom: 0
+
+@media (max-width: 1200px)
+  #iten
+    article
+      width: 70%
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      background: none
+    h1
+      border-bottom: 1px solid $mainGray
+      border-width: 30%
+      margin-bottom: 3%
+
+//---- About (Excursions) ----
+
+#about
+  display: flex
+  flex-direction: column
+  padding: 4em 0
+  background: $lightBlue
+  margin-top: 5%
+  padding: 1em
+  border-radius: 7px
+  h1
+    display: inline-block
+    margin: 5% 5% 0 5%
+  article
+    display: flex
+    flex-direction: column
+    margin: 0 0.85em 1em
+    padding: 1em
+    text-align: left
+    h3
+      text-align: center
+      font-size: 1.5em
+      font-weight: bold
+      margin-bottom: 0.5em
+      color: $darkBlue
+    p
+      text-align: left
+      font-size: 0.95em
+      line-height: 24px
+      font-weight: 400
+      margin-bottom: 1em
+
+@media (min-width: 1200px)
+  #about
+    flex-direction: row
+    article
+      margin-bottom: 0
+
+@media (max-width: 1200px)
+  #about
+    article
+      width: 70%
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      background: none
+    h1
+      border-bottom: 1px solid $mainGray
+      border-width: 30%
+      margin-bottom: 3%
+
+//---- Excursions ----
+
+#excur
+  h2
+    margin: 0
+    font-size: 40px
+    text-align: center
+    margin-bottom: 2em
+  form
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: space-around
+    margin: 0 auto
+    padding: 4em 0
+    max-width: 600px
+  a, &:active
+    color: #fff
+  form
+    input, button
+      margin: 0 1em
+      padding: 10px
+      height: 50px
+      outline: 0
+    input
+      background-color: #fff
+      margin-bottom: 1em
+      border: 1px solid #ddd
+      border-radius: 3px
+      color: #494f4f
+      -webkit-transition: border-color 0.4s
+      -moz-transition: border-color 0.4s
+      transition: border-color 0.4s
+      &:focus
+        border-color: #879090
+    .button
+      border: 0
+      box-shadow: inset 0 0 0 2px #879090
+      color: #494f4f
+      &:hover, &:focus
+        background: #879090
+        color: #fff
+  ul
+    display: flex
+    li
+      display: flex
+      div
+        display: flex
+      background: rgba(0, 0, 0, 0.35)
+      position: relative
+      flex-direction: column
+      cursor: pointer
+      -webkit-transition: background 0.4s
+      -moz-transition: background 0.4s
+      transition: background 0.4s
+      &:hover
+        background: rgba(0, 0, 0, 0)
+      div
+        position: absolute
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 1em
+        width: 100%
+        height: 100%
+        text-align: center
+        color: #fff
+        h3, h4
+          margin: 0
+        h3
+          margin-bottom: 0.35em
+          font-size: 1em
+          font-weight: 400
+          letter-spacing: 2px
+          text-transform: uppercase
+        h4
+          font-weight: 300
+          letter-spacing: 1px
+      img
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        flex-shrink: 0
+        min-width: 100%
+        min-height: 100%
+        position: relative
+        z-index: -1
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    list-style: none
+
+@media (min-width: 500px)
+  #excur form
+    flex-direction: row
+
+@media (min-width: 500px)
+  #excur form input
+    flex: 3
+    margin-bottom: 0
+
+@media (min-width: 500px)
+  #excur form .button
+    flex: 100px
+
+@media (min-width: 500px)
+  #excur ul li
+    flex: 50%
+
+@media (min-width: 800px)
+  #excur ul li
+    flex: 25%
+
+h1
+  text-align: center
+  font-size: 50px
+  margin-top: 5%
+
+//---- The Team ----
+
+#team
+  display: flex
+  flex-direction: column
+  padding: 4em 0
+  article
+    background: $lightBlue
+    display: flex
+    flex-direction: column
+    margin: 0 0.85em 1em
+    padding: 1em
+    border-radius: 7px
+    text-align: center
+    align-items: center
+    img
+      height: 200px
+      width: 200px
+      margin: 5% 0 10% 0
+      border-radius: 50%
+    h3
+      font-size: 1.5em
+      font-weight: bold
+      margin-bottom: 0.5em
+      color: $darkBlue
+    p
+      font-size: 0.95em
+      line-height: 24px
+      font-weight: 400
+      margin-bottom: 1em
+  hr
+    display: none
+  article span
+    display: flex
+    align-items: center
+    margin-top: auto
+    font-size: 25px
+    padding: 10px 30px
+  span
+    i
+      width: 45px
+    a
+      color: #375a82
+    i:nth-child(2)
+      text-align: center
+      margin: 0 30% 0 30%
+  article span a i
+    &:hover, &:focus
+      opacity: 0.5
+
+@media (min-width: 1200px)
+  #team
+    flex-direction: row
+    article
+      margin-bottom: 0
+
+@media (max-width: 1200px)
+  #team article
+    width: 70%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    background: none
+
+//---- Contact Form ----
+
+#contact-form
+  text-align: center
+  margin-top: 4%
+  h2
+    font-weight: 600
+    font-size: 2.5em
+  a
+    color: #8bc3d9
+
+input
+  margin-bottom: 10px
+
+textarea
+  height: 100px
+  margin-bottom: 10px
+
+input
+  &:first-of-type
+    margin-top: 35px
+  font-size: 1em
+  padding: 15px 10px 10px
+  border: none
+  background: #ededed
+  color: #375a82
+  border-radius: 5px
+  box-sizing: border-box
+  width: 80%
+  max-width: 600px
+
+textarea
+  font-size: 1em
+  padding: 15px 10px 10px
+  border: none
+  background: #ededed
+  color: #375a82
+  border-radius: 5px
+  box-sizing: border-box
+  width: 80%
+  max-width: 600px
+
+.contact-btn
+  margin-top: 15px
+  margin-bottom: 10%
+  background-color: #375a82
+  padding: 12px 45px
+  border-radius: 5px
+  border: none
+  -webkit-transition: .7s
+  transition: .5s
+  display: inline-block
+  cursor: pointer
+  width: 80%
+  max-width: 600px
+  height: 45px
+  color: #fff
+  &:hover
+    background: $lightBlue
+    color: #375a82
+
+//media queries
+@media (max-width: 700px)
+  input, textarea, .contact-btn
+    width: 90%
+
+.message
+  font-size: 1.1em
+  display: none
+  padding-top: 10px
+  padding-bottom: 10px
+  background-color: #2ABCA7
+  width: 80%
+  margin: auto
+  color: #FAFAFA
+  -webkit-border-radius: 6px
+  -moz-border-radius: 6px
+  border-radius: 6px
+
+//---- Donate FORM ----
+
+.donation-container
+  height: 1000px
+  font-weight: 500
+  font-size: 12px
+  text-transform: uppercase
+  margin-top: 50px
+  border-radius: 7px
+
+.donation-box
+  max-width: 85%
+  width: 390px
+  height: 430px
+  background-color: #F5F5F5
+  border-radius: 7px
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  -webkit-transition: all 0.15s ease-out
+  -moz-transition: all 0.15s ease-out
+  -o-transition: all 0.15s ease-out
+  transition: all 0.15s ease-out
+  .title
+    background-color: $midBlue
+    width: 100%
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    color: white
+    text-align: center
+    padding-top: 12px
+    padding-bottom: 12px
+    font-size: 15px
+  .donate-button
+    background-color: $midBlue
+    width: 80%
+    color: white
+    border-radius: 7px
+    margin: 0 10% 0 10%
+    text-align: center
+    padding-top: 12px
+    padding-bottom: 12px
+    font-size: 18px
+    bottom: 10px
+    position: absolute
+    cursor: pointer
+    font-weight: 800
+  .fields
+    width: 59%
+    display: block
+    position: absolute
+    top: 30px
+    left: 15px
+    input
+      width: 100%
+      font-size: 17px
+      padding: 10px
+      border-radius: 4px
+      border-width: 0px
+      color: #5C5C5C
+      font-weight: 500
+      margin-bottom: 10px
+      -webkit-font-smoothing: antialiased
+
+\::-webkit-input-placeholder
+  color: #cdcdcd
+  font-size: 15px
+
+\:-moz-placeholder
+  //Firefox 18-
+  color: #cdcdcd
+  font-size: 15px
+
+\::-moz-placeholder
+  //Firefox 19+
+  color: #cdcdcd
+  font-size: 15px
+
+\:-ms-input-placeholder
+  color: #cdcdcd
+  font-size: 15px
+
+.donation-box .amount
+  width: 20%
+  display: block
+  position: absolute
+  top: 60px
+  right: 15px
+  .button
+    width: 100%
+    background-color: lightgray
+    margin-bottom: 10px
+    text-align: center
+    color: white
+    padding: 15px 0px 15px 0px
+    border-radius: 4px
+    font-size: 20px
+    cursor: pointer
+    -webkit-transition: 400ms background-color
+    -moz-transition: 800ms opacity, 800ms right
+    -ms-transition: 800ms opacity, 800ms right
+    -o-transition: 800ms opacity, 800ms right
+    transition: 200ms background-color
+    &:hover, &.selected
+      background-color: $midBlue
+    input
+      min-width: 34px
+      font-size: 20px
+      border: none
+      background-color: transparent
+      color: white
+      font-size: 20px
+      -webkit-transition: all 0.15s ease-out
+      -moz-transition: all 0.15s ease-out
+      -o-transition: all 0.15s ease-out
+      transition: all 0.15s ease-out
+
+.switch
+  position: absolute
+  top: 225px
+  left: 15px
+  margin: 60px auto
+  height: 26px
+  width: 58.5%
+  background: white
+  border-radius: 3px
+
+.switch-label
+  position: relative
+  z-index: 2
+  float: left
+  width: 49%
+  line-height: 26px
+  font-size: 11px
+  color: $midBlue
+  text-align: center
+  cursor: pointer
+  font-weight: bold
+  &:active
+    font-weight: bold
+
+.switch-label-off
+  padding-left: 2px
+
+.switch-label-on
+  padding-right: 2px
+
+.switch-input
+  display: none
+  &:checked +
+    .switch-label
+      font-weight: bold
+      color: #fff
+      -webkit-transition: 0.15s ease-out
+      -moz-transition: 0.15s ease-out
+      -o-transition: 0.15s ease-out
+      transition: 0.15s ease-out
+    .switch-label-on ~ .switch-selection
+      left: 114px
+
+.switch-selection
+  display: block
+  position: absolute
+  z-index: 1
+  top: 2px
+  left: 2px
+  width: 49%
+  height: 22px
+  background: #65bd63
+  border-radius: 3px
+  background-color: $midBlue
+  -webkit-transition: left 0.15s ease-out
+  -moz-transition: left 0.15s ease-out
+  -o-transition: left 0.15s ease-out
+  transition: left 0.15s ease-out
+
+.anon-box
+  position: absolute
+  top: 290px
+  left: 13px
+  label
+    position: relative
+    top: -15px
+    font-size: 13px
+    color: gray
+
+.checkbox
+  -webkit-appearance: none
+  background-color: #fafafa
+  border: 1px solid $midBlue
+  padding: 9px
+  width: 10%
+  border-radius: 3px
+  display: inline-block
+  position: relative
+  outline: none
+  -webkit-transition: all 0.15s ease-out
+  -moz-transition: all 0.15s ease-out
+  -o-transition: all 0.15s ease-out
+  transition: all 0.15s ease-out
+  &:checked
+    background-color: $midBlue
+    border: 1px solid $midBlue
+    color: white
+    &:after
+      content: '\2714'
+      font-size: 14px
+      position: absolute
+      top: 0px
+      left: 3px
+      color: white
+
+//media queries
+@media (max-width: 500px)
+  .switch
+    width: 49%
+  .switch-label
+    width: 48%
+  .switch-input:checked + .switch-label-on ~ .switch-selection
+    left: 80px
+
+@media only screen and (max-width: 900px) and (min-width: 500px)
+  .switch
+    width: 42%
+  .switch-label
+    width: 44%
+  .switch-input:checked + .switch-label-on ~ .switch-selection
+    left: 80px
+
+//---- Donate ----
+
+.donate
+  text-align: center
+  background-image: url("../img/home-donate.jpg")
+  background-position: center
+  background-size: contain
+  background-size: cover
+  background-repeat: no-repeat
+  height: 75vh
+
+#donate
+  display: flex
+  flex-direction: row
+  padding: 4em 0
+  justify-content: center
+
+.donate h1
+  flex-direction: none
+  text-align: center
+  font-size: 3em
+
+#donate article
+  background: none
+  display: flex
+  flex-direction: column
+  flex: 0 1 100%
+  overflow: hidden
+  margin: 0 4em 1em
+  margin-bottom: 0
+  padding: 1em
+  border-radius: 7px
+  text-align: center
+  align-items: center
+  h3
+    font-size: 3.3em
+    font-weight: bold
+    margin-bottom: 0.5em
+    color: $darkBlue
+  p
+    font-size: 1em
+    line-height: 24px
+    font-weight: 400
+    margin-bottom: 1em
+
+.donate-btn
+  text-align: center
+  margin: 15px auto 50px auto
+  background-color: #fff
+  padding: 12px 45px
+  border-radius: 5px
+  border: none
+  -webkit-transition: .7s
+  transition: .5s
+  cursor: pointer
+  width: 50%
+  max-width: 200px
+  height: 45px
+  color: $darkBlue
+  &:hover
+    background: $darkBlue
+    color: #fff
+
+@media (max-width: 900px) and (min-width: 650px)
+  #donate article
+    margin: 0 0.3em 0.3em
+    margin-bottom: 0
+    h3
+      font-size: 2.3em
+    p
+      font-size: 0.9em
+      line-height: 15px
+  .donate h1
+    margin-top: 10%
+
+@media (max-width: 650px)
+  #donate
+    flex-direction: row
+    article
+      margin: 0 0.3em 0.3em
+      margin-bottom: 0
+      h3
+        font-size: 1.7em
+      p
+        font-size: 0.9em
+        line-height: 15px
+  .donate h1
+    margin-top: 20%
+
+//---- Sign Up ----
+
+.sign-up
+  text-align: center
+  background-image: url("../img/home-donate.jpg")
+  background-position: center
+  background-size: contain
+  background-size: cover
+  background-repeat: no-repeat
+  height: 75vh
+
+#sign-up
+  display: flex
+  flex-direction: row
+  padding: 4em 0
+  justify-content: center
+
+.sign-up h1
+  flex-direction: none
+  text-align: center
+  font-size: 3em
+
+#sign-up article
+  background: none
+  display: flex
+  flex-direction: column
+  flex: 0 1 100%
+  overflow: hidden
+  margin: 0 4em 1em
+  margin-bottom: 0
+  padding: 1em
+  border-radius: 7px
+  text-align: center
+  align-items: center
+  h3
+    font-size: 3.3em
+    font-weight: bold
+    margin-bottom: 0.5em
+    color: $darkBlue
+  p
+    font-size: 1em
+    line-height: 24px
+    font-weight: 400
+    margin-bottom: 1em
+
+.sign-up-btn
+  text-align: center
+  margin: 15px auto 50px auto
+  background-color: #fff
+  padding: 12px 45px
+  border-radius: 5px
+  border: none
+  -webkit-transition: .7s
+  transition: .5s
+  cursor: pointer
+  width: 50%
+  max-width: 200px
+  height: 45px
+  color: $darkBlue
+  &:hover
+    background: $darkBlue
+    color: #fff
+
+@media (max-width: 900px) and (min-width: 650px)
+  #donate article
+    margin: 0 0.3em 0.3em
+    margin-bottom: 0
+    h3
+      font-size: 2.3em
+    p
+      font-size: 0.9em
+      line-height: 15px
+  .sign-up h1
+    margin-top: 10%
+
+@media (max-width: 650px)
+  #sign-up
+    flex-direction: row
+    article
+      margin: 0 0.3em 0.3em
+      margin-bottom: 0
+      h3
+        font-size: 1.7em
+      p
+        font-size: 0.9em
+        line-height: 15px
+  .sign-up h1
+    margin-top: 20%
+
+//---- Footer ----
+
+#main-footer
+  font-family: $fontReg
+  background: $lightBlue
+  display: flex
+  flex-direction: row
+  font-size: 14px
+  padding: 2em 0
+  p
+    margin: 0 15% 0 15%
+  .container
+    display: flex
+    flex-direction: row
+    justify-content: center
+  a
+    text-decoration: none
+    color: #375a82
+    &:hover
+      opacity: 0.5
+
+@media (max-width: 900px)
+  #main-footer p
+    margin: 0 5% 0 5%
+
+//---- Navbar ----
+
+#main-header
+  padding: 0.85em 0
+  .container
+    display: flex
+    flex-direction: row
+    align-items: center
+  .logo
+    font-size: 2.35em
+    color: $lightBlue
+  nav a
+    font-size: 0.55em
+    text-transform: uppercase
+    color: #fff
+
+@media (min-width: 500px)
+  #main-header
+    .logo, nav a
+      padding: 10px 15px
+
+@media (max-width: 949px)
+  #main-header nav a
+    font-size: 1.25em
+
+.main-nav
+  list-style-type: none
+  display: none
+
+.boxed
+  color: white
+  background-color: $midBlue
+  border-radius: 4px
+  padding: 5px
+  -webkit-transition: .7s
+
+.nav-links:hover
+  opacity: 0.75
+  -webkit-transition: .7s
+
+.main-nav li
+  text-align: center
+  margin: 15px auto
+
+.navbar-toggle
+  position: absolute
+  top: 20px
+  right: 20px
+  cursor: pointer
+  color: $lightBlue
+  font-size: 24px
+
+.active
+  display: block
+
+@media screen and (min-width: 950px)
+  .navbar
+    display: flex
+    justify-content: space-between
+    padding-bottom: 0
+    height: 70px
+    align-items: center
+  .main-nav
+    display: flex
+    margin-right: 30px
+    flex-direction: row
+    justify-content: flex-end
+    li
+      margin: 0
+      font-size: 25px
+  .nav-links
+    margin-left: 1vw
+  .navbar-toggle
+    display: none
+  .logo:hover, .nav-links:hover
+    color: rgba(255, 255, 255, 1)
+    opacity: 0.75
